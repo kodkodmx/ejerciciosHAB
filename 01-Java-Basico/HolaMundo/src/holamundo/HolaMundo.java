@@ -16,7 +16,7 @@ public class HolaMundo {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Hola Mundo");
-        System.out.println("ALGO MAS QUE DIJO");
+        System.out.println("Probando un hola mundo diferente");
     }
 
 }
