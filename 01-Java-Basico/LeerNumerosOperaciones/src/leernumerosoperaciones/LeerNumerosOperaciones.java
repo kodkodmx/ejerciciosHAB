@@ -19,7 +19,7 @@ public class LeerNumerosOperaciones {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Ingrese primer numero:");
         int primero = teclado.nextInt();
-        System.out.println("Ingrese primer numero:");
+        System.out.println("Ingrese segundo numero:");
         int segundo = teclado.nextInt();
         int suma = primero + segundo;
         int resta = primero - segundo;
