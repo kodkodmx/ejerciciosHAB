@@ -25,9 +25,9 @@ public class TiposDeDatos {
         
         edad = 'a';
         letra = 33;
-        bandera = 0;
+        //bandera = 0;
         estatura = 33;
-        nombre = 'a';
+        //nombre = 'a';
         
         System.out.println("Hola Alberto, Bienvenido al sistema");
         System.out.println("Hola " + nombre+ ", Bienvenido al sistema");
