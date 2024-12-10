@@ -21,10 +21,13 @@ public class TiposDeDatos {
         boolean bandera = true;
         double estatura = 1.67;
         
+        //ejercicio
+        
         edad = 'a';
         letra = 33;
         bandera = 0;
         estatura = 33;
+        nombre = 'a';
         
         System.out.println("Hola Alberto, Bienvenido al sistema");
         System.out.println("Hola " + nombre+ ", Bienvenido al sistema");
