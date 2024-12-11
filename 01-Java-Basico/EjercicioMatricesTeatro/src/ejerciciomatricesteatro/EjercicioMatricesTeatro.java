@@ -42,7 +42,7 @@ public class EjercicioMatricesTeatro {
                 System.out.println();
             }
             System.out.println("\nC");
-            System.out.println("En que fila quieres tus asiento?");
+            System.out.println("\n\nEn que fila quieres tus asiento?");
             fila = teclado.nextInt();
             if (fila > 4){
                 return;
