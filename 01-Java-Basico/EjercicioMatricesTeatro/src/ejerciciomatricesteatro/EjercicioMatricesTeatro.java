@@ -5,6 +5,7 @@
 package ejerciciomatricesteatro;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 /**
  *
@@ -18,20 +19,21 @@ public class EjercicioMatricesTeatro {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner teclado = new Scanner(System.in);
-        //char teatro[][]= new char[5][5];
-        char teatro[][] = {
-            {'O', 'O', 'O', 'O', 'O'},
-            {'O', 'O', 'O', 'O', 'O'},
-            {'O', 'O', 'O', 'O', 'O'},
-            {'O', 'O', 'O', 'O', 'O'},
-            {'O', 'O', 'O', 'O', 'O'}
-        };
-        Integer fila;
-        Integer asiento;
+        char teatro[][]= new char[5][5];
+        int fila;
+        int asiento;
+        boolean continuar = true;
         
-        while (true){
-            System.out.println("Que Asiento quieres reservar [F,C]?\n\n");
-            System.out.println("Vacios: O | Ocupados: X | Salir: Fuera de Rango\n");
+        for (int i = 0; i < teatro.length; i++) {
+            for (int j = 0; j < teatro[i].length; j++) {
+                teatro[i][j] = 'O';
+            }
+        }
+
+        
+        while (continuar){
+            System.out.println("¿Que Asiento quieres reservar?\n\n");
+            System.out.println("Vacios: O | Ocupados: X \n");
             System.out.println(" | 0 1 2 3 4  F");
             System.out.println("-+----------");
             for (int i = 0; i < teatro.length; i++) {
@@ -44,20 +46,22 @@ public class EjercicioMatricesTeatro {
             System.out.println("\nC");
             System.out.println("\n\nEn que fila quieres tus asiento?");
             fila = teclado.nextInt();
-            if (fila > 4){
-                return;
-            }
+            
             System.out.println("Que Asiento?");
             asiento = teclado.nextInt();
-            if (asiento > 4){
-                return;
-            }
+            
             if (teatro[fila][asiento] == 'X'){
                 System.out.println("***El Asiento ya esta ocupado***\n"); 
             }else{
                 teatro[fila][asiento] = 'X';
             }
-        }       
+            System.out.println("¿Quieres reservar otro? (N para no)");
+            teclado = new Scanner(System.in);
+            String res = teclado.nextLine();
+            if (res.equalsIgnoreCase("N")) {
+                continuar = false;
+            }
+        }
     }
     
 }
