@@ -10,7 +10,7 @@ public class EjercicioLibreria {
     public static void main(String[] args) {
         
         Scanner teclado = new Scanner(System.in);
-        Libro libro[] = new Libro[2];
+        Libro libros[] = new Libro[2];
         
         System.out.println("Bienvenido al sistema de libreria");
         System.out.println("Ingrese los datos del libro que quiere cargar");
@@ -18,7 +18,7 @@ public class EjercicioLibreria {
         //codigo ISBN, título, autor, género, número de páginas.
         Libro book = new Libro();
         
-        for (int i=0; i<libro.length; i++){
+        for (int i=0; i<libros.length; i++){
             
             
             System.out.println("Ingrese ISBN");
@@ -46,16 +46,16 @@ public class EjercicioLibreria {
             System.out.println("Despues del cambio");
             System.out.println(book.toString());
             
-            libro[i] = book;
+            libros[i] = book;
             teclado = new Scanner(System.in);
             book = new Libro();
             
         }
         
         System.out.println("Arreglo completo:");
-        System.out.println(Arrays.toString(libro));
-        for(int j=0;j<libro.length;j++){
-            System.out.println(libro[j].toString());
+        System.out.println(Arrays.toString(libros));
+        for(int j=0;j<libros.length;j++){
+            System.out.println(libros[j].toString());
         }
                   
     }
