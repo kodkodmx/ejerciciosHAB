@@ -2,6 +2,7 @@ package ejerciciomatrices;
 
 import java.util.Scanner;
 import logica.Producto;
+import static logica.Producto.buscarProducto;
 
 public class EjercicioMatrices {
 
@@ -37,33 +38,5 @@ public class EjercicioMatrices {
         System.out.println("\nGracias por usar nuestro sistema\n");
     }
     
-    public static boolean buscarProducto(Producto[][] productos) {
-        
-        Scanner teclado = new Scanner(System.in);
-        System.out.print("\n¿Desea buscar algun producto? (S/N) ");
-        String respuesta = teclado.nextLine();
-        if (respuesta.equalsIgnoreCase("S")) {
-            System.out.print("\nNombre del producto a buscar: ");
-            String nombre = teclado.nextLine();
-            boolean encontrado = false;
-            for (int i = 0; i < productos.length; i++) {
-                for (int j = 0; j < productos[0].length; j++) {
-                    if (productos[i][j].getNombre().equals(nombre)) {
-                        System.out.println("\nProducto encontrado: ");
-                        System.out.println("Nombre: " + productos[i][j].getNombre());
-                        System.out.println("Categoria: " + productos[i][j].getCategoria());
-                        System.out.println("Precio: " + productos[i][j].getPrecio());
-                        System.out.println("El producto se encuentra en la posicion [" + i + "][" + j + "]");
-                        encontrado = true;
-                    }
-                }
-            }
-            if (!encontrado) {
-                System.out.println("\nProducto no encontrado");
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
+    
 }
