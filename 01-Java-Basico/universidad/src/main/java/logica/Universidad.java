@@ -29,7 +29,7 @@ public class Universidad {
                         int edad = scanner.nextInt();
                         System.out.print("Ingrese la calificación del estudiante: ");
                         double calificacion = scanner.nextDouble();
-                        scanner.nextLine(); // Limpiar buffer
+                        scanner.nextLine();
 
                         Estudiante estudiante = new Estudiante(nombre, edad, calificacion);
                         estudianteDAO.agregarEstudiante(estudiante);
