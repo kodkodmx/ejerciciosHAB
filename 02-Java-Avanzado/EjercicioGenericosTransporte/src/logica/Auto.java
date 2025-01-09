@@ -6,7 +6,5 @@ public class Auto {
     public String toString() {
         return this.getClass().getSimpleName();
     }
-    
-    
-    
+       
 }

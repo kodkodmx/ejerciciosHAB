@@ -17,9 +17,9 @@ public class EjercicioGenericosTransporte {
 
     public static void main(String[] args) {
                
-        Reserva <Auto,? extends MetodoReserva> auto = new Reserva (new Auto(),new EnLinea());
-        Reserva <Moto,? extends MetodoReserva> moto = new Reserva (new Moto(),new Presencial());
-        Reserva <Bici,? extends MetodoReserva> bici = new Reserva (new Bici(),new EnLinea());
+        Reserva <Auto, MetodoReserva> auto = new Reserva (new Auto(),new EnLinea());
+        Reserva <Moto, MetodoReserva> moto = new Reserva (new Moto(),new Presencial());
+        Reserva <Bici, MetodoReserva> bici = new Reserva (new Bici(),new EnLinea());
         
         auto.mostrarInfo();
         moto.mostrarInfo();
